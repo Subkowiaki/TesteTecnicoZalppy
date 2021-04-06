@@ -10,8 +10,10 @@ durante a chamada a api apresenta as 5 alternativas em uma unica vez afim de eco
   - O retorno:
    Api é composta pelos seguintes campos no body de seu retono: 
     [question] => Recebe o nome da marca.
-    [correct] => Recebe o index da resposta correta.    
+    [correct] => Recebe o index da resposta correta. 
+    
   A opção pelo envio apenas das duas informações se deu devido ao padrão das perguntas ser similar, em caso de formação dinâmica utilizando um banco de dados por exemplo, poderiamos utilizar ainda um campo adicional chamado [response] que receberia as alternativas para exibição na tela. como este não foi o caso optei pela passagem simples de informação. 
+  
  - Performance:
    O tempo de reposta da api esta em torno de 400ms com uma carga de 270bites, com a utilização de cache control poderiamos otimizar este tempo de resposta para menos de 80ms porém optei por não utilizar este dispositivo para que o avaliador possa conferir no app a cada utilização uma nova ordem de perguntas gerada de forma aleatória.
    
